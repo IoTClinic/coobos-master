@@ -1,0 +1,20 @@
+1) install prerequisite software
+	#sudo apt-get update
+	#sudo apt-get install libboost-graph-dev srecord subversion git-core bison flex
+
+2)make and instal SDCC@UUNTU_15.05
+	#sudo cp ~/Desktop/sdcc_src/sdcc@u15.04.tar.gz /opt
+	#cd /opt
+	#sudo tar -zxvf sdcc@u15.04.tar.gz
+	#cd sdcc
+	#sudo ./configure --disable-gbz80-port --disable-z80-port --disable-ds390-port --disable-ds400-port --disable-r3ka-port --disable-tlcs90-port --disable-s08-port --disable-pic14-port --disable-pic16-port --disable-hc08-port --disable-r2k-port --disable-stm8-port --disable-z180-port --disable-sdcdb --disable-ucsim
+	#sudo make 
+	#sudo make install 
+	#sdcc -v
+		SDCC : mcs51 3.1.1 #7100 (Oct  9 2016) (Linux)
+	#exit
+
+4) build and test example 
+	#cd ~/IoTClinic
+	#cd contiki/examples/cc2530dk
+	#make hello-world
